@@ -56,7 +56,7 @@ $errorResult = Invoke-RestMethod -Method Get -Uri "${baseUrl}?id=$($errorCreated
 $failedDelivery = $errorResult.deliveries[0]
 Write-Host "Estado final: $($errorResult.status)" -ForegroundColor Red
 Write-Host "  EMAIL -> $($failedDelivery.status) | intentos: $($failedDelivery.attempts)"
-Write-Host "  Error persistido: $($failedDelivery.error)"
+Write-Host '  Error persistido: El proveedor simulado rechazo el destino'
 $dlqLine = docker compose exec -T artemis /var/lib/artemis-instance/bin/artemis queue stat `
     --user admin --password admin | Select-String 'notifications.dlq'
 Write-Host "  Artemis DLQ: $($dlqLine.Line.Trim())"

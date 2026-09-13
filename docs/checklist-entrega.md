@@ -14,7 +14,7 @@ Esta tabla relaciona cada requisito de la sección 2.1 con su evidencia concreta
 | Diagrama de arquitectura | Cumplido | Diagrama Mermaid en `docs/arquitectura.md`. |
 | Descripción del flujo principal | Cumplido | Sección «Secuencia principal» de `docs/arquitectura.md`. |
 | Identificación y justificación de patrones EIP | Cumplido | Tabla «Patrones EIP y justificación» de `docs/arquitectura.md`. |
-| Evidencias de funcionamiento | Cumplido | `evidencias/resultado-prueba-funcional.txt`: compilación, ocho pruebas, flujo exitoso, reintentos y DLQ. |
+| Evidencias de funcionamiento | Cumplido | Captura real `evidencias/01-powershell-prueba-funcional-completa.png` y detalle técnico `evidencias/resultado-prueba-funcional.txt`. |
 | Mensaje de entrada | Cumplido | `examples/notification-ok.json` y `examples/notification-error.json`. |
 | Transformación de mensajes | Cumplido | `examples/transformation-email.json`, `transformation-sms.json` y `transformation-push.json`. |
 | Evidencia de enrutamiento | Cumplido | `examples/routing-example.json` y colas descritas en `docs/arquitectura.md`. |

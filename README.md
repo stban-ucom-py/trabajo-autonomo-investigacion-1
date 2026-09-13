@@ -163,6 +163,10 @@ Las pruebas cubren validación correcta, campos obligatorios, lista y duplicaci�
 correlación, transformación de SMS, seguridad básica del HTML y fallo del proveedor. La evidencia de la
 prueba funcional real se encuentra en `evidencias/resultado-prueba-funcional.txt`.
 
+Evidencia de ejecución real en la máquina del estudiante:
+
+![PowerShell: prueba funcional completa](evidencias/01-powershell-prueba-funcional-completa.png)
+
 ### Captura de evidencia en PowerShell
 
 Con los contenedores activos, abra una ventana nueva de PowerShell dentro de esta carpeta y ejecute:
