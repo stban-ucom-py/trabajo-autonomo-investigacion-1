@@ -1,0 +1,16 @@
+{
+  "id": "413dd5b0-d824-489a-93b5-3fe2dfea39e0",
+  "external_id": "ORDER-2026-ERROR-1",
+  "subject": "Prueba de reintentos",
+  "status": "PARTIAL_FAILURE",
+  "deliveries": [
+    {
+      "channel": "EMAIL",
+      "destination": "fail@example.com",
+      "status": "FAILED",
+      "attempts": 3,
+      "provider_message_id": null,
+      "error": "El proveedor simulado rechazó el destino"
+    }
+  ]
+}

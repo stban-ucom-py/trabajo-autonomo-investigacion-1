@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'py.edu.ucom'
+version = '1.0.0'
+
+repositories { mavenCentral() }
+
+ext {
+    camelVersion = '4.18.4'
+    artemisVersion = '2.40.0'
+}
+
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+
+dependencies {
+    implementation platform("org.apache.camel:camel-bom:${camelVersion}")
+    implementation 'org.apache.camel:camel-main'
+    implementation 'org.apache.camel:camel-direct'
+    implementation 'org.apache.camel:camel-bean'
+    implementation 'org.apache.camel:camel-jms'
+    implementation 'org.apache.camel:camel-netty-http'
+    implementation 'org.apache.camel:camel-jackson'
+    implementation "org.apache.activemq:artemis-jakarta-client:${artemisVersion}"
+    implementation 'org.postgresql:postgresql:42.7.8'
+    implementation 'com.zaxxer:HikariCP:7.0.2'
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+
+    testImplementation platform('org.junit:junit-bom:5.14.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.assertj:assertj-core:3.27.6'
+}
+
+application { mainClass = 'py.edu.ucom.notifications.NotificationApplication' }
+
+tasks.named('test') { useJUnitPlatform() }
+
+tasks.register('copyRuntimeDependencies', Copy) {
+    from configurations.runtimeClasspath
+    into layout.buildDirectory.dir('dependencies')
+}
+
+tasks.named('build') { dependsOn tasks.named('copyRuntimeDependencies') }

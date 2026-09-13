@@ -1,0 +1,9 @@
+{
+  "external_id": "ORDER-2026-ERROR-1",
+  "subject": "Prueba de reintentos",
+  "content": "Este caso simula el rechazo del proveedor.",
+  "recipient": {
+    "email": "fail@example.com"
+  },
+  "channels": ["EMAIL"]
+}

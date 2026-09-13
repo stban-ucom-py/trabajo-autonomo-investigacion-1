@@ -1,0 +1,11 @@
+{
+  "external_id": "ORDER-2026-0001",
+  "subject": "Tu pedido fue despachado",
+  "content": "El pedido ya está en camino.",
+  "recipient": {
+    "email": "cliente@example.com",
+    "phone": "+595981123456",
+    "device_token": "device-token-abc123"
+  },
+  "channels": ["EMAIL", "SMS", "PUSH"]
+}

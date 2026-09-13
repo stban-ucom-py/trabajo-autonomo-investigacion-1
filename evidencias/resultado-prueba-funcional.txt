@@ -1,0 +1,34 @@
+TRABAJO AUTÓNOMO DE INVESTIGACIÓN 1
+Resultado de verificación: 13/09/2026
+
+Entorno verificado:
+- Java 21 (imagen eclipse-temurin)
+- Gradle 9.6.0
+- Apache Camel 4.18.4
+- ActiveMQ Artemis 2.40.0
+- PostgreSQL 17
+
+Construcción:
+BUILD SUCCESSFUL
+8 pruebas ejecutadas, 0 fallos.
+
+Caso exitoso:
+- Solicitud aceptada por HTTP con estado QUEUED.
+- ID de correlación: 946cf550-f7b2-4d41-b5c8-bbf0a5391bf5
+- Estado final: COMPLETED.
+- EMAIL: SENT, 1 intento, ID del proveedor conservado.
+- SMS: SENT, 1 intento, ID del proveedor conservado.
+- PUSH: SENT, 1 intento, ID del proveedor conservado.
+
+Caso de fallo controlado:
+- ID de correlación: 413dd5b0-d824-489a-93b5-3fe2dfea39e0
+- Destino: fail@example.com
+- Estado final: PARTIAL_FAILURE.
+- EMAIL: FAILED luego de 3 intentos.
+- Error persistido: El proveedor simulado rechazó el destino.
+- Artemis notifications.dlq: 1 mensaje agregado y 1 mensaje disponible.
+
+Conclusión:
+Se verificó el flujo HTTP -> persistencia -> JMS -> Splitter -> Content-Based Router ->
+Message Translator -> adaptador de proveedor. También se verificaron reintentos, estado
+persistente y Dead Letter Channel.

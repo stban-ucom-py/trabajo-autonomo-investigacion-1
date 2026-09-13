@@ -1,0 +1,11 @@
+{
+  "id": "946cf550-f7b2-4d41-b5c8-bbf0a5391bf5",
+  "external_id": "ORDER-2026-0001",
+  "subject": "Tu pedido fue despachado",
+  "status": "COMPLETED",
+  "deliveries": [
+    { "channel": "EMAIL", "status": "SENT", "attempts": 1 },
+    { "channel": "SMS", "status": "SENT", "attempts": 1 },
+    { "channel": "PUSH", "status": "SENT", "attempts": 1 }
+  ]
+}

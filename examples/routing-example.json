@@ -1,0 +1,20 @@
+{
+  "description": "Decisiones del Content-Based Router para la solicitud de ejemplo",
+  "routes": [
+    {
+      "condition": "channel == EMAIL",
+      "destination": "notifications.email",
+      "consumer": "email-provider-adapter"
+    },
+    {
+      "condition": "channel == SMS",
+      "destination": "notifications.sms",
+      "consumer": "sms-provider-adapter"
+    },
+    {
+      "condition": "channel == PUSH",
+      "destination": "notifications.push",
+      "consumer": "push-provider-adapter"
+    }
+  ]
+}
