@@ -6,6 +6,8 @@
 **Materia:** Integración de Sistemas  
 **Tema:** Implementación de patrones de integración empresarial en una arquitectura moderna basada en mensajería
 
+**Repositorio público:** https://github.com/stban-ucom-py/trabajo-autonomo-investigacion-1
+
 ## Problema elegido
 
 Una empresa necesita enviar avisos generados por sus sistemas de negocio mediante correo electrónico,

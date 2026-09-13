@@ -4,7 +4,7 @@ Esta tabla relaciona cada requisito de la sección 2.1 con su evidencia concreta
 
 | Requisito | Estado | Evidencia |
 |---|---|---|
-| Código fuente completo | Cumplido localmente | Directorios `src/main/java` y `src/test/java`. Pendiente publicar esta carpeta en un repositorio de GitHub. |
+| Código fuente completo en GitHub | Cumplido | Repositorio público: https://github.com/stban-ucom-py/trabajo-autonomo-investigacion-1; código en `src/main/java` y pruebas en `src/test/java`. |
 | `build.gradle` y configuración Gradle | Cumplido | `build.gradle`, `settings.gradle`, `gradlew`, `gradlew.bat` y `gradle/wrapper`. |
 | Ejecución con Java o Docker | Cumplido | `Dockerfile`, `docker-compose.yml` e instrucciones del `README.md`. |
 | Configuración de Apache Camel | Cumplido | `NotificationApplication.java` y `NotificationRoutes.java`, con seis rutas nombradas. |
@@ -21,8 +21,7 @@ Esta tabla relaciona cada requisito de la sección 2.1 con su evidencia concreta
 | Mensajes de salida | Cumplido | `examples/output-completed.json` y `examples/output-failed.json`. |
 | Ejecución en entorno limpio | Cumplido | Verificada con `docker compose up --build -d`; no necesita Java, Gradle, Artemis ni PostgreSQL instalados localmente. |
 
-## Único paso externo pendiente
+## Publicación
 
-La cátedra exige una URL de GitHub. El contenido del proyecto está listo, pero debe crearse un repositorio
-en la cuenta del estudiante y publicarse allí. Después de publicarlo, conviene colocar la URL al inicio del
-`README.md` y presentar esa misma URL junto con el archivo ZIP.
+El proyecto fue publicado como repositorio público en la cuenta del estudiante. Para la entrega se debe
+presentar la URL anterior junto con el archivo ZIP de respaldo.
