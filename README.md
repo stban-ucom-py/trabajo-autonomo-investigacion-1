@@ -163,6 +163,25 @@ Las pruebas cubren validación correcta, campos obligatorios, lista y duplicaci�
 correlación, transformación de SMS, seguridad básica del HTML y fallo del proveedor. La evidencia de la
 prueba funcional real se encuentra en `evidencias/resultado-prueba-funcional.txt`.
 
+### Captura de evidencia en PowerShell
+
+Con los contenedores activos, abra una ventana nueva de PowerShell dentro de esta carpeta y ejecute:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\evidencia-pantalla.ps1
+```
+
+El script ejecuta realmente un caso multicanal y un caso de error, muestra los estados finales, los tres
+intentos y la DLQ, y queda detenido al finalizar. Maximice PowerShell y presione `Alt + Impr Pant` para
+copiar únicamente la ventana completa. Pegue la captura en Paint y guárdela como:
+
+```text
+evidencias/01-powershell-prueba-funcional-completa.png
+```
+
+La captura no debe incluir el escritorio, el navegador, Docker Desktop ni otras ventanas.
+
 ## Diseño y patrones EIP
 
 El diagrama completo, el flujo, los canales y la justificación de cada patrón están en
